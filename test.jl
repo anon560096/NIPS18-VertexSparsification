@@ -106,6 +106,6 @@ function run_all_tests(dataset::String)
 	end
 	"""
 	df = testApproxRatio(string("data/",dataset,"/"), k_factor_array, sparsification_factor_array, no_of_terminals)
-	CSV.write(string("JuliaResults/results_",dataset,".csv"),df)  
+	CSV.write(string("julia_results_",dataset,".csv"),df)  
 end
 
