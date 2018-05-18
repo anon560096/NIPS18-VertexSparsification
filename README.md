@@ -1,8 +1,11 @@
 # NIPS18experiments
-temp repo with a mirror of what to host on a separate public id (to anonymize things)
+Code for experiments were written in C++ and Julia.
 
-Code for experiments were written in C++.
-They are in the file ExperimentsAll.cpp.
+Data files are in the folder data/.
+
+Running C++ code:
+
+The code is in the file ExperimentsAll.cpp.
 
 Compile with flags:
 
@@ -25,7 +28,7 @@ this will be fixed in a more stable version.
 For example, running
 
 ```
-./a.out <data/MNs-cellegansneural.txt 
+./a.out <data/MNs-celegansneural/data.txt 
 ```
 
 Outputs:
@@ -51,5 +54,20 @@ graph with 297 vertices and 2359 edges
 9 terminals: mean 2-way cut quality:2.33248,mean 4-way cut quality:2.86641,mean 8-way cut quality:2.85794,
 ```
 
-Data files are in the folder data/. They include:
+Running Julia code:
 
+Commands to run the code:
+```
+include("test.jl")
+run_all_tests("<dir_name>")
+```
+Here, <dir_name> refers to the name of the directory containing the dataset (in a file named data.txt).
+
+It reads all edges as a list, and sets weights to 1 if unspecified. The code also only extracts the largest connected component of the input graph to work with.
+
+It runs the algorithm with parameters set as follows:
+Number of terminals: 16
+k Values: 2,4,8
+sparsification factors: 2,4,8,16,32,64
+
+On running, the output is generated in a csv file with name "results-<dir_name>.csv".
