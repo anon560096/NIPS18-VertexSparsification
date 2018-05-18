@@ -10,7 +10,7 @@ The code is in the file ExperimentsAll.cpp.
 Compile with flags:
 
 ```
-g++ ExperimentaAll.cpp -O3 -std=c++11
+g++ ExperimentAll.cpp -O3 -std=c++11
 ```
 
 (this only works with C++ 11)
