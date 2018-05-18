@@ -70,4 +70,4 @@ Number of terminals: 16
 k Values: 2,4,8
 sparsification factors: 2,4,8,16,32,64
 
-On running, the output is generated in a csv file with name "results-<dir_name>.csv".
+On running, the output is generated in a csv file with name "julia_results-<dir_name>.csv".
